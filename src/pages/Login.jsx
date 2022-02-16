@@ -3,14 +3,17 @@ import Container from "@mui/material/Container";
 import { Box, TextField, Button, Typography } from "@mui/material";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const initialForm = {
   email: "",
   password: "",
 };
 
-const Login = ({ setUserInfo, isLoading, errors }) => {
+const Login = ({ setUserInfo, isLoading, errors, setUser }) => {
   const [form, setForm] = useState(initialForm);
+
+  let navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({
@@ -26,6 +29,11 @@ const Login = ({ setUserInfo, isLoading, errors }) => {
 
     setUserInfo(form);
   };
+
+  const atajo = () => {
+    setUser(true);
+    navigate("/home");
+  };
   return (
     <div
       style={{
@@ -35,9 +43,34 @@ const Login = ({ setUserInfo, isLoading, errors }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          top: "0",
+          backgroundColor: "#000000bc",
+          padding: ".2rem .5rem",
+          color: "white",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="caption" align="center">
+          Es probable que no puedas logearte por problemas HTTPS al hacer la
+          petición😌, podés agregar este sitio como "seguro" o te dejo un atajo
+          😎
+        </Typography>
+        <Button
+          color="secondary"
+          variant="contained"
+          onClick={atajo}
+          size="small"
+        >
+          Atajo
+        </Button>
+      </Box>
       <Container
         sx={{
-          height: {xs:"70vh", sm: "70vh", md: "85vh", lg: "85vh" },
+          height: { xs: "70vh", sm: "70vh", md: "85vh", lg: "85vh" },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
