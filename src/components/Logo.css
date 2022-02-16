@@ -1,0 +1,25 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: transform .6s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-name {
+    color: rgb(216, 216, 216);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.logo-name span{
+    font-weight: 700;
+}
