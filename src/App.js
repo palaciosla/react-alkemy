@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     if (!userInfo) return;
-    let url = "http://challenge-react.alkemy.org/";
+    let url = "https://challenge-react.alkemy.org/";
     axios
       .post(url, userInfo)
       .then((res) => {
