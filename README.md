@@ -4,6 +4,9 @@ Challenge presentado en Alkemy.org. App que simula un menú de restaurant, busca
 ### Login
 El login se hace con una petición a alkemy [email: 'challenge@alkemy.org', password: 'react'].
 
+## Demo
+https://menu-lean.netlify.app/
+
 ![Image](https://github.com/palaciosla/portfolio-01/blob/main/src/img/screen-menu.png)
 
 
