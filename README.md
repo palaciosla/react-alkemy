@@ -1,3 +1,12 @@
+# App menú
+Challenge presentado en Alkemy.org. App que simula un menú de restaurant, busca los platos a travez de una API y puedes agregarlos al menú. Al agregar al menú, muestra una barra donde indica el total, health score y tiempo promedio de demora. 
+
+### Login
+El login se hace con una petición a alkemy [email: 'challenge@alkemy.org', password: 'react'].
+
+![Image](https://github.com/palaciosla/portfolio-01/blob/main/src/img/screen-menu.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
